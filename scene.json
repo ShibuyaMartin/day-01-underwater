@@ -1,0 +1,30 @@
+{
+  "display": {
+    "title": "New scene",
+    "favicon": "favicon_asset",
+    "navmapThumbnail": "scene-thumbnail.png"
+  },
+  "owner": "",
+  "contact": {
+    "name": "Mika#1194",
+    "email": ""
+  },
+  "main": "bin/game.js",
+  "tags": [],
+  "scene": {
+    "parcels": ["52,2","53,2","54,2","55,2","56,2","57,2","52,3","53,3","54,3","55,3","56,3","57,3","52,4","53,4","54,4","55,4","56,4","57,4","52,5","53,5","54,5","55,5","56,5","57,5","52,6","53,6","54,6","55,6","56,6","57,6","52,7","53,7","54,7","55,7","56,7","57,7","52,8","53,8","54,8","55,8","56,8","57,8","52,9","53,9","54,9","55,9","56,9","57,9"],
+    "base": "52,2"
+  },
+  "communications": {
+    "type": "webrtc",
+    "signalling": "https://signalling-01.decentraland.org"
+  },
+  "policy": {
+    "contentRating": "E",
+    "fly": true,
+    "voiceEnabled": true,
+    "blacklist": [],
+    "teleportPosition": ""
+  
+  }
+}
