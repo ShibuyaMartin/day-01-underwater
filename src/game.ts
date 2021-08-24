@@ -10,6 +10,7 @@ underwater_stage.addComponent(
 )
 engine.addEntity(underwater_stage)
 
+
 //LIGHT SYSTEM
 
 //octopus lights
@@ -59,6 +60,11 @@ lights_colums.addComponent(
 engine.addEntity(lights_colums)
 
 
+
+
+
+// JP FISHES 
+
 //add fish A
 
 export let fishA = new Entity()
@@ -83,7 +89,7 @@ fishB.addComponent(
 )
 engine.addEntity(fishB)
 
-
+/*
 //add fewo
 
 export let fewo = new Entity()
@@ -95,4 +101,4 @@ fewo.addComponent(
     scale: new Vector3(10,10,10)
   })
 )
-engine.addEntity(fewo)
+engine.addEntity(fewo) */
