@@ -1,5 +1,7 @@
 //MAIN STAGE DAY UNDERWATER
 
+import { FestivalManagement } from "./concert/festivalMGMT"
+
 export let underwater_stage = new Entity()
 underwater_stage.addComponent(new GLTFShape('models/underwater_stage.glb'))
 underwater_stage.addComponent(
@@ -102,3 +104,14 @@ fewo.addComponent(
   })
 )
 engine.addEntity(fewo) */
+
+
+Input.instance.subscribe("BUTTON_DOWN", ActionButton.PRIMARY, false, ()=>{
+  log("postion", Camera.instance.position)
+})
+
+
+export let manager = new FestivalManagement()
+
+
+

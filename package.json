@@ -14,7 +14,19 @@
     "decentraland-ecs": "latest"
   },
   "dependencies": {
+    "@dcl/crypto-scene-utils": "latest",
+    "@dcl/ecs-scene-utils": "latest",
+    "@dcl/l2-scene-utils": "latest",
+    "@dcl/ui-scene-utils": "latest",
+    "decentraland-builder-scripts": "latest",
     "decentraland-ecs": "latest",
-    "decentraland-builder-scripts": "latest"
-  }
+    "eth-connect": "^6.0.0"
+  },
+  "bundleDependencies": [
+    "@dcl/ecs-scene-utils",
+    "@dcl/ui-scene-utils",
+    "@dcl/crypto-scene-utils",
+    "eth-connect",
+    "@dcl/l2-scene-utils"
+  ]
 }
