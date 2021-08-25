@@ -34,6 +34,18 @@ export default {
         {position: new Vector3(29.7,10.4,99.5), rotation: Quaternion.Euler(0,120,0), scale: new Vector3(15.1,15.4,1)},
         {position: new Vector3(44.4,21.5,108.8), rotation: Quaternion.Euler(22.912,137.463,358.212), scale: new Vector3(7.5,7.5,1)},
         {position: new Vector3(27.8,21.8,93.1), rotation: Quaternion.Euler(12.998,121.026,359.769), scale: new Vector3(6.8,6.7,-7)}
+        ],
+
+        danceAreas:[
+            {transform: {position: new Vector3(50,1,24), rotation: Quaternion.Euler(90,0,0), scale: new Vector3(11,10,1)}, type: "robot"},
+            {transform: {position: new Vector3(79,1,43), rotation: Quaternion.Euler(90,0,0), scale: new Vector3(11,10,1)}, type: "tik"},
+            {transform: {position: new Vector3(78,1,62), rotation: Quaternion.Euler(90,0,0), scale: new Vector3(11,10,1)}, type: "tektonik"},
+            {transform: {position: new Vector3(68,1,95), rotation: Quaternion.Euler(90,0,0), scale: new Vector3(11,10,1)}, type: "hammer"},
+            {transform: {position: new Vector3(47,1,103), rotation: Quaternion.Euler(90,0,0), scale: new Vector3(11,10,1)}, type: "headexplode"},
+            {transform: {position: new Vector3(73,20,55), rotation: Quaternion.Euler(90,0,0), scale: new Vector3(11,10,1)}, type: "handsair"},
+            {transform: {position: new Vector3(72,20,70), rotation: Quaternion.Euler(90,0,0), scale: new Vector3(11,10,1)}, type: "disco"},
+            {transform: {position: new Vector3(76,1,80), rotation: Quaternion.Euler(90,0,0), scale: new Vector3(11,10,1)}, type: "dab"},
+            {transform: {position: new Vector3(52,1,63), rotation: Quaternion.Euler(90,0,0), scale: new Vector3(18,33,5)}, type: "all"}
         ]
     },
 

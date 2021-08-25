@@ -1,5 +1,6 @@
 
 import * as utils from '@dcl/ecs-scene-utils'
+import { createDanceAreas } from 'src/activations/createDanceAreas'
 
 import resources from "src/resources"
 import { LiveScreen } from "./liveScreen"
@@ -88,7 +89,7 @@ createStage(){
 }
 
 createActivations(){
-
+    createDanceAreas()
 }
 
 createEnvironment(){
