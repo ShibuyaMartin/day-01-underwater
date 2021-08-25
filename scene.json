@@ -25,6 +25,16 @@
     "voiceEnabled": true,
     "blacklist": [],
     "teleportPosition": ""
-  
-  }
+  },
+  "spawnPoints": [
+    {
+      "name": "spawn1",
+      "default": true,
+      "position": {
+        "x": 88.1,
+        "y": 2,
+        "z": 66.38
+      }
+	}
+  ]
 }

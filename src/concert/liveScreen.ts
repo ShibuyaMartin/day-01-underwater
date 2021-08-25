@@ -13,6 +13,7 @@ export class LiveScreen extends Entity{
         engine.addEntity(this)
         this.addComponent(new Material())
         this.addComponent(new Transform(tranform))
+        this.getComponent(Transform).scale = new Vector3(0,0,0)
         this.addComponent(new PlaneShape())
         hud.attachToEntity(this)
     }

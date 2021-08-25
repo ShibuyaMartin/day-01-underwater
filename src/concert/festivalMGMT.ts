@@ -1,3 +1,7 @@
+
+import * as utils from '@dcl/ecs-scene-utils'
+
+import resources from "src/resources"
 import { LiveScreen } from "./liveScreen"
 
 
@@ -5,34 +9,116 @@ import { LiveScreen } from "./liveScreen"
 export class FestivalManagement{
 
     liveScreens:LiveScreen[] = []
+    stage:Entity
+
+    lights:Entity
+    lightsBack:Entity
+    lightsColumns:Entity
+    waterColumns:Entity
+
+    fishA:Entity
+    fishB:Entity
 
 
 constructor(){
 
+    this.createStage()
+    this.createEnvironment()
+    this.createActivations()
     this.createScreens()
-    this.showVideoFeeds(true, "https://dclteam.s3.us-west-1.amazonaws.com/313200.mp4")
+}
+
+createStage(){
+
+    this.stage = new Entity()
+    this.stage.addComponent(resources.models.stage)
+    this.stage.addComponent(resources.transforms.stage)
+    engine.addEntity(this.stage)
+
+
+    //LIGHT SYSTEM
+    //octopus lights
+    this.lights = new Entity()
+    this.lights.addComponent(resources.models.lights)
+    this.lights.addComponent(resources.transforms.lights)
+    engine.addEntity(this.lights)
+
+    this.lights.addComponent(new Animator())
+    for(let i = 0; i < resources.animationStates.lights.length; i++){
+        this.lights.getComponent(Animator).addClip(new AnimationState(resources.animationStates.lights[i]))
+        this.lights.getComponent(Animator).getClip(resources.animationStates.lights[i]).stop()
+    }
+
+    // back lights
+    this.lightsBack = new Entity()
+    this.lightsBack.addComponent(resources.models.lightsBack)
+    this.lightsBack.addComponent(resources.transforms.lightsBack)
+    engine.addEntity(this.lightsBack)
+
+    this.lightsBack.addComponent(new Animator())
+    for(let i = 0; i < resources.animationStates.lightsBack.length; i++){
+        this.lightsBack.getComponent(Animator).addClip(new AnimationState(resources.animationStates.lightsBack[i]))
+        this.lightsBack.getComponent(Animator).getClip(resources.animationStates.lightsBack[i]).stop()
+    }
+
+    //add water colums & lights
+    this.lightsColumns = new Entity()
+    this.lightsColumns.addComponent(resources.models.lightsColumns)
+    this.lightsColumns.addComponent(resources.transforms.lightsColumns)
+    engine.addEntity(this.lightsColumns)
+
+    this.lightsColumns.addComponent(new Animator())
+    for(let i = 0; i < resources.animationStates.lightsColumns.length; i++){
+        this.lightsColumns.getComponent(Animator).addClip(new AnimationState(resources.animationStates.lightsColumns[i]))
+        this.lightsColumns.getComponent(Animator).getClip(resources.animationStates.lightsColumns[i]).stop()
+    }
+
+
+    this.waterColumns = new Entity()
+    this.waterColumns.addComponent(resources.models.waterColumns)
+    this.waterColumns.addComponent(resources.transforms.waterColumns)
+    engine.addEntity(this.waterColumns)
+
+    this.waterColumns.addComponent(new Animator())
+    for(let i = 0; i < resources.animationStates.waterColumns.length; i++){
+        this.waterColumns.getComponent(Animator).addClip(new AnimationState(resources.animationStates.waterColumns[i]))
+        this.waterColumns.getComponent(Animator).getClip(resources.animationStates.waterColumns[i]).stop()
+    }
+
+}
+
+createActivations(){
+
+}
+
+createEnvironment(){
+
+    // JP FISHES 
+
+    //add fish A
+    this.fishA = new Entity()
+    this.fishA.addComponent(resources.models.fishA)
+    this.fishA.addComponent(resources.transforms.fishA)
+    engine.addEntity(this.fishA)
+
+    //add fish B
+    this.fishB = new Entity()
+    this.fishB.addComponent(resources.models.fishB)
+    this.fishB.addComponent(resources.transforms.fishB)
+    engine.addEntity(this.fishB)
+
+
 }
 
 createScreens(){
 
-    //main stage
-    this.liveScreens.push(new LiveScreen("screen1", {position: new Vector3(15,22.8,64), rotation: Quaternion.Euler(0,90,0), scale: new Vector3(23.1,23.1,1)}))
-
-    //stage left
-    this.liveScreens.push(new LiveScreen("screen2", {position: new Vector3(26.3,26.5,21.9), rotation: Quaternion.Euler(15,60,0), scale: new Vector3(11.9,11.8,-7)}))
-    this.liveScreens.push(new LiveScreen("screen3", {position: new Vector3(29.7,10.4,28.5), rotation: Quaternion.Euler(0,60,0), scale: new Vector3(15.1,15.4,1)}))
-    this.liveScreens.push(new LiveScreen("screen4", {position: new Vector3(44.4,21.5,19.2), rotation: Quaternion.Euler(22.912,42.537,358.212), scale: new Vector3(7.5,7.5,1)}))
-    this.liveScreens.push(new LiveScreen("screen5", {position: new Vector3(27.8,21.8,34.9), rotation: Quaternion.Euler(12.998,58.974,359.769), scale: new Vector3(6.8,6.7,-7)}))
-
-    //stage right
-    this.liveScreens.push(new LiveScreen("screen6", {position: new Vector3(26.3,26.5,106.1), rotation: Quaternion.Euler(-15,-60,0), scale: new Vector3(11.9,11.8,-7)}))
-    this.liveScreens.push(new LiveScreen("screen7", {position: new Vector3(29.7,10.4,99.5), rotation: Quaternion.Euler(0,-60,0), scale: new Vector3(15.1,15.4,1)}))
-    this.liveScreens.push(new LiveScreen("screen8", {position: new Vector3(44.4,21.5,108.8), rotation: Quaternion.Euler(-22.912,-42.537,-358.212), scale: new Vector3(7.5,7.5,1)}))
-    this.liveScreens.push(new LiveScreen("screen9", {position: new Vector3(27.8,21.8,93.1), rotation: Quaternion.Euler(-12.998,-58.974,-359.769), scale: new Vector3(6.8,6.7,-7)}))
+    for(let i in resources.transforms.screens){
+        this.liveScreens.push(new LiveScreen("screen-"+i, resources.transforms.screens[i]))
+    }
 
 }
 
-showVideoFeeds(showAll:boolean, allFeed?: string){
+showVideoFeeds(showAll:boolean, allFeed?: string, screens?:LiveScreen[], feeds?:string[]){
 
     if(showAll){
         let newTexture = new VideoTexture(new VideoClip(allFeed))
@@ -40,6 +126,50 @@ showVideoFeeds(showAll:boolean, allFeed?: string){
             this.liveScreens[i].setVideoFeed(newTexture, true)
         }
     }
+}
+
+checkTime(){
+
+    //for testing, delay 5 seconds
+    let delay = new Entity()
+    engine.addEntity(delay)
+    delay.addComponent(new utils.Delay(5000,()=>{
+        this.activateScene()
+    }))
+}
+
+activateScene(){
+
+    //show videos
+    this.activateScreens()
+
+    //play lights
+    this.playLights()
+
+    //activate environment
+    this.activateEnvironment()
+}
+
+activateScreens(){
+    this.showVideoFeeds(true, "https://dclteam.s3.us-west-1.amazonaws.com/ko5.mp4")
+
+    for(let i in resources.transforms.screens){
+        this.liveScreens[i].getComponent(Transform).scale = new Vector3(resources.transforms.screens[i].scale.x, resources.transforms.screens[i].scale.y, resources.transforms.screens[i].scale.z)
+    }
+}
+
+playLights(){
+
+    this.lights.getComponent(Animator).getClip(resources.animationStates.lights[0]).play()
+    this.lightsColumns.getComponent(Animator).getClip(resources.animationStates.lightsColumns[0]).play()
+    this.lightsBack.getComponent(Animator).getClip(resources.animationStates.lightsBack[0]).play()
+    this.waterColumns.getComponent(Animator).getClip(resources.animationStates.waterColumns[0]).play()
+
+}
+
+activateEnvironment(){
+    this.fishA.getComponent(Transform).scale.setAll(1)
+    this.fishB.getComponent(Transform).scale.setAll(1)
 }
     
 }
