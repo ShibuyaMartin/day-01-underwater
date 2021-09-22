@@ -87,6 +87,21 @@ mushroom_06.addComponent(
 )
 engine.addEntity(mushroom_06) 
 
+
+//add bubbles
+
+export let bubbles = new Entity()
+bubbles.addComponent(new GLTFShape('models/bubbles.glb'))
+bubbles.addComponent(
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1,1,1)
+  })
+)
+engine.addEntity(bubbles) 
+
+
 executeTask(async ()=>{
   if(await isPreviewMode()){
     Input.instance.subscribe("BUTTON_DOWN", ActionButton.PRIMARY, false, ()=>{

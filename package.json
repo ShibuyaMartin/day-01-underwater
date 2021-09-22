@@ -20,6 +20,7 @@
     "@dcl/ui-scene-utils": "latest",
     "decentraland": "^3.8.1",
     "decentraland-builder-scripts": "latest",
+    "decentraland-ecs-utils": "^1.5.2",
     "eth-connect": "^6.0.0"
   },
   "bundleDependencies": [

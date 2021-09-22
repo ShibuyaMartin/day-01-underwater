@@ -23,7 +23,7 @@ export default {
         fishB:   new Transform({position: new Vector3(48, 0, 64), rotation: Quaternion.Euler(0, 90, 0) ,scale: Vector3.Zero()}),
 
         screens:[ 
-        {position: new Vector3(15,22.8,64), rotation: Quaternion.Euler(0,90,0), scale: new Vector3(23.1,23.1,1)},
+        {position: new Vector3(16,22.8,64), rotation: Quaternion.Euler(0,90,0), scale: new Vector3(26,26,1)},
 
         {position: new Vector3(26.3,26.5+6.5,21.9), rotation: Quaternion.Euler(15,60,0), scale: new Vector3(11.9,11.8,-7)},
         {position: new Vector3(29.7,10.4+1.2,28.5), rotation: Quaternion.Euler(0,60,0), scale: new Vector3(15.1,15.4,1)},
