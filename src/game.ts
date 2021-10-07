@@ -168,6 +168,19 @@ smoke.addComponent(
 )
 engine.addEntity(smoke) 
 
+//add plants_stage
+
+export let plants_stage = new Entity()
+plants_stage.addComponent(new GLTFShape('models/plants_stage.glb'))
+plants_stage.addComponent(
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1,1,1)
+  })
+)
+engine.addEntity(plants_stage) 
+
 
 
 
