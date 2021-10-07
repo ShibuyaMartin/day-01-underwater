@@ -52,7 +52,7 @@ export default {
 
 */
     animationStates:{
-        lights: ["TL_Rise","TL_V01","TL_V02","TL_V03","TL_V04","TL_V05","TL_V06","TL_V07"],
+        lights: ["TL_Neutral","TL_Rise","TL_V01","TL_V02","TL_V03","TL_V04","TL_V05","TL_V06","TL_V07"],
         lightsBack: ["Light_01_Action","Light_02_Action","Light_03_Action"],
         lightsColumns: ["Beat_V01_20fps", "Beat_V02", "Beat_V03_20pfs", "Beat_V04_20pfs"],
         waterColumns: ["WaterColumn_Action"]
