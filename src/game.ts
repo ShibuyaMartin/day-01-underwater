@@ -66,7 +66,7 @@ export let mushrooms_05 = new Entity()
 mushrooms_05.addComponent(new GLTFShape('models/mushrooms_02.glb'))
 mushrooms_05.addComponent(
   new Transform({
-    position: new Vector3(80, 30, 60),
+    position: new Vector3(90, 30, 60),
     rotation: Quaternion.Euler(0, 145, 0),
     scale: new Vector3(1,1,1)
   })
@@ -88,6 +88,21 @@ mushroom_06.addComponent(
 engine.addEntity(mushroom_06) 
 
 
+
+//add mushrooms_07
+
+export let mushrooms_07 = new Entity()
+mushrooms_07.addComponent(new GLTFShape('models/mushrooms.glb'))
+mushrooms_07.addComponent(
+  new Transform({
+    position: new Vector3(84, 0, 64),
+    rotation: Quaternion.Euler(0, 30, 0),
+    scale: new Vector3(1,1,1)
+  })
+)
+engine.addEntity(mushrooms_07) 
+
+
 //add bubbles
 
 export let bubbles = new Entity()
@@ -100,6 +115,60 @@ bubbles.addComponent(
   })
 )
 engine.addEntity(bubbles) 
+
+//add water_fountain 
+
+export let water_fountain = new Entity()
+water_fountain.addComponent(new GLTFShape('models/water_fountain.glb'))
+water_fountain.addComponent(
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1,1,1)
+  })
+)
+engine.addEntity(water_fountain) 
+
+//add lights_top
+
+export let lights_top = new Entity()
+lights_top.addComponent(new GLTFShape('models/lights_top.glb'))
+lights_top.addComponent(
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1,1,1)
+  })
+)
+engine.addEntity(lights_top) 
+
+//add artist names
+
+export let an_nina_nesbitt = new Entity()
+an_nina_nesbitt.addComponent(new GLTFShape('models/an_nina_nesbitt.glb'))
+an_nina_nesbitt.addComponent(
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1,1,1)
+  })
+)
+engine.addEntity(an_nina_nesbitt) 
+
+//add smoke
+
+export let smoke = new Entity()
+smoke.addComponent(new GLTFShape('models/smoke.glb'))
+smoke.addComponent(
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1,1,1)
+  })
+)
+engine.addEntity(smoke) 
+
+
 
 
 executeTask(async ()=>{
