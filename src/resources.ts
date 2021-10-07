@@ -2,7 +2,7 @@ export default {
 
     models:{
         stage: new GLTFShape('models/underwater_stage.glb'),
-        lights: new GLTFShape('models/light_01.glb'),
+        lights: new GLTFShape('models/lights_tentacles.glb'),
         lightsBack: new GLTFShape('models/lights_back.glb'),
         lightsColumns: new GLTFShape('models/lights_colums.glb'),
         waterColumns: new GLTFShape('models/columns_water.glb'),
