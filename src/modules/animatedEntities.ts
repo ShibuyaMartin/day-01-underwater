@@ -1,75 +1,118 @@
 //add lights_top
 
 import resources from 'src/resources'
+import { Synced } from './syncable'
 
-export let lights_top = new Entity()
-lights_top.addComponent(new GLTFShape('models/lights_top.glb'))
-lights_top.addComponent(
+export let tentacles = new Synced(
+  resources.models.tentacles,
+  true,
+  resources.transforms.tentacles
+)
+
+tentacles.playAnimation('TL_Neutral')
+
+export let lights_columns = new Synced(
+  resources.models.lightsColumns,
+  true,
+  resources.transforms.lightsColumns
+)
+
+export let lights_back = new Synced(
+  resources.models.lightsBack,
+  true,
+  resources.transforms.lightsBack
+)
+
+export let lights_top = new Synced(
+  resources.models.lightsTop,
+  true,
+  resources.transforms.lightsTop
+)
+
+export let smoke = new Synced(
+  resources.models.smoke,
+  true,
+  resources.transforms.smoke
+)
+
+export let nina_logo = new Synced(
+  new GLTFShape('models/nina_logo.glb'),
+  true,
   new Transform({
     position: new Vector3(48, 0, 64),
     rotation: Quaternion.Euler(0, 90, 0),
     scale: new Vector3(1, 1, 1),
   })
 )
-engine.addEntity(lights_top)
 
-//add artist names
-
-export let an_nina_nesbitt = new Entity()
-an_nina_nesbitt.addComponent(new GLTFShape('models/an_nina_nesbitt.glb'))
-an_nina_nesbitt.addComponent(
+export let nina_welcome = new Synced(
+  new GLTFShape('models/nina_welcome.glb'),
+  true,
   new Transform({
     position: new Vector3(48, 0, 64),
     rotation: Quaternion.Euler(0, 90, 0),
     scale: new Vector3(1, 1, 1),
   })
 )
-engine.addEntity(an_nina_nesbitt)
 
-//add smoke
-
-export let smoke = new Entity()
-smoke.addComponent(new GLTFShape('models/smoke.glb'))
-smoke.addComponent(
+export let nina_hearts = new Synced(
+  new GLTFShape('models/nina_hearts.glb'),
+  true,
   new Transform({
     position: new Vector3(48, 0, 64),
     rotation: Quaternion.Euler(0, 90, 0),
     scale: new Vector3(1, 1, 1),
   })
 )
-engine.addEntity(smoke)
 
-//LIGHT SYSTEM
-//octopus lights
-let lights = new Entity()
-lights.addComponent(resources.models.lights)
-lights.addComponent(resources.transforms.lights)
-engine.addEntity(lights)
+export let nina_emojis = new Synced(
+  new GLTFShape('models/nina_emojis.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
 
-lights.addComponent(new Animator())
-for (let i = 0; i < resources.animationStates.lights.length; i++) {
-  lights
-    .getComponent(Animator)
-    .addClip(new AnimationState(resources.animationStates.lights[i]))
-  lights
-    .getComponent(Animator)
-    .getClip(resources.animationStates.lights[i])
-    .stop()
-}
+export let fireworkCenterL = new Synced(
+  new GLTFShape('models/firework_01.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
 
-// back lights
-let lightsBack = new Entity()
-lightsBack.addComponent(resources.models.lightsBack)
-lightsBack.addComponent(resources.transforms.lightsBack)
-engine.addEntity(lightsBack)
+export let fireworkCenterR = new Synced(
+  new GLTFShape('models/firework_02.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
 
-lightsBack.addComponent(new Animator())
-for (let i = 0; i < resources.animationStates.lightsBack.length; i++) {
-  lightsBack
-    .getComponent(Animator)
-    .addClip(new AnimationState(resources.animationStates.lightsBack[i]))
-  lightsBack
-    .getComponent(Animator)
-    .getClip(resources.animationStates.lightsBack[i])
-    .stop()
-}
+export let fireworkL = new Synced(
+  new GLTFShape('models/firework_03.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
+
+export let fireworkR = new Synced(
+  new GLTFShape('models/firework_04.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
+
+/// Names of other artists

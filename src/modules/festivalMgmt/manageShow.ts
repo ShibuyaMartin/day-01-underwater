@@ -1,3 +1,19 @@
+import {
+  fireworkCenterL,
+  fireworkCenterR,
+  fireworkL,
+  fireworkR,
+  lights_back,
+  lights_columns,
+  lights_top,
+  nina_emojis,
+  nina_hearts,
+  nina_logo,
+  nina_welcome,
+  smoke,
+  tentacles,
+} from '../animatedEntities'
+
 // Default beats per minute of show
 export let BPM = 120
 
@@ -20,27 +36,128 @@ export function runAction(action: string) {
 
       break
     case 'PAUSEALL':
+      tentacles.playAnimation('TL_Neutral')
+      lights_columns.hide()
+      lights_back.hide()
+      lights_top.hide()
+      smoke.hide()
+      fireworkCenterL.hide()
+      fireworkCenterR.hide()
+      fireworkL.hide()
+      fireworkR.hide()
 
-    case 'L0':
+      nina_logo.hide()
+      nina_welcome.hide()
+      nina_hearts.hide()
+      nina_emojis.hide()
+
+    case 'TL_Rise':
+      tentacles.playAnimation('TL_Rise', true)
       break
-    case 'L1':
+    case 'TL_VO1':
+      tentacles.playAnimation('TL_VO1')
       break
-    case 'L2':
+    case 'TL_VO2':
+      tentacles.playAnimation('TL_VO2')
       break
-    case 'L3':
+    case 'TL_VO3':
+      tentacles.playAnimation('TL_VO3')
+      break
+    case 'TL_VO4':
+      tentacles.playAnimation('TL_VO4')
+      break
+    case 'TL_VO5':
+      tentacles.playAnimation('TL_VO5')
+      break
+    case 'TL_VO6':
+      tentacles.playAnimation('TL_VO6')
+      break
+    case 'TL_VO7':
+      tentacles.playAnimation('TL_VO7')
+      break
+    case 'Smoke_Neutral':
+      smoke.playAnimation('Smoke_Neutral')
       break
 
-    case 'L4':
+    case 'Smoke_V01':
+      smoke.playAnimation('Smoke_V01')
       break
 
-    case 'L5':
+    case 'Smoke_V02':
+      smoke.playAnimation('Smoke_V02')
       break
 
-    case 'L6':
+    case 'Smoke_V02':
+      smoke.playAnimation('Smoke_V02')
       break
 
-    case 'L7':
+    case 'Lights_01_Action':
+      lights_back.playAnimation('Lights_01_Action')
       break
+
+    case 'Lights_02_Action':
+      lights_back.playAnimation('Lights_02_Action')
+      break
+
+    case 'Lights_03_Action':
+      lights_back.playAnimation('Lights_03_Action')
+      break
+
+    case 'Beat_V01':
+      lights_columns.playAnimation('Beat_V01')
+      break
+
+    case 'Beat_V02':
+      lights_columns.playAnimation('Beat_V02')
+      break
+
+    case 'Beat_V03':
+      lights_columns.playAnimation('Beat_V03')
+      break
+
+    case 'Beat_V04':
+      lights_columns.playAnimation('Beat_V04')
+      break
+
+    case 'SL_V01':
+      lights_columns.playAnimation('SL_V01')
+      break
+
+    case 'SL_V02':
+      lights_columns.playAnimation('SL_V02')
+      break
+
+    case 'SL_V03':
+      lights_columns.playAnimation('SL_V03')
+      break
+
+    case 'SL_V04':
+      lights_columns.playAnimation('SL_V04')
+      break
+
+    case 'Nina_Logo_Action':
+      nina_logo.playAnimation('Nina_Logo_Action', true)
+      break
+
+    case 'Welcome_Action':
+      nina_welcome.playAnimation('Welcome_Action', true)
+      break
+
+    case 'Hearts_Action':
+      nina_hearts.playAnimation('Hearts_Action', true)
+      break
+
+    case 'Emojis_Action':
+      nina_emojis.playAnimation('Emojis_Action', true)
+      break
+
+    case 'circleBubbles':
+      //TODO
+      break
+
+    // TODO:
+    // fireworks
+    // other artist names
 
     case 'randomL2L3':
       randomizer([`L2`, `L3`], 8)

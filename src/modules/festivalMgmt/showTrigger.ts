@@ -3,8 +3,7 @@ import { runAction } from '../festivalMgmt/manageShow'
 import { NodeCue, SubtitleSystem } from '../subtitle/SubtitleSystem'
 import { VideoSystem } from '../festivalMgmt/VideoSystem'
 import * as utils from '@dcl/ecs-scene-utils'
-
-import { videoMat } from '../videoScreens'
+import { manager } from 'src/game'
 
 const DEFAULT_VIDEO =
   'https://player.vimeo.com/external/552481870.m3u8?s=c312c8533f97e808fccc92b0510b085c8122a875'
@@ -107,8 +106,8 @@ export function startShow(showData: showType, artistId: number) {
 }
 
 export function stopShow() {
-  if (videoMat.texture) {
-    let currentVideoTexuture = videoMat.texture as VideoTexture
+  if (manager.videoMat.albedoTexture) {
+    let currentVideoTexuture = manager.videoMat.albedoTexture as VideoTexture
     currentVideoTexuture.playing = false
   }
 
@@ -137,7 +136,8 @@ export function playVideo(
   const myVideoTexture = new VideoTexture(myVideoClip)
 
   // main video
-  videoMat.texture = myVideoTexture
+  manager.videoMat.albedoTexture = myVideoTexture
+  manager.videoMat.emissiveTexture = myVideoTexture
 
   myVideoTexture.seekTime(offsetSeconds)
   myVideoTexture.playing = true
@@ -172,7 +172,8 @@ export function playDefaultVideo() {
   const myVideoTexture = new VideoTexture(myVideoClip)
 
   // main video
-  videoMat.texture = myVideoTexture
+  manager.videoMat.albedoTexture = myVideoTexture
+  manager.videoMat.emissiveTexture = myVideoTexture
   myVideoTexture.playing = true
 
   runAction('artist0')

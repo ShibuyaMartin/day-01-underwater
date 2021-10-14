@@ -3,12 +3,14 @@ import { PredefinedEmote } from '@decentraland/RestrictedActions'
 export default {
   models: {
     stage: new GLTFShape('models/underwater_stage.glb'),
-    lights: new GLTFShape('models/lights_tentacles.glb'),
+    tentacles: new GLTFShape('models/lights_tentacles.glb'),
     lightsBack: new GLTFShape('models/lights_back.glb'),
     lightsColumns: new GLTFShape('models/lights_colums.glb'),
+    lightsTop: new GLTFShape('models/lights_top.glb'),
     waterColumns: new GLTFShape('models/columns_water.glb'),
     fishA: new GLTFShape('models/fishA.glb'),
     fishB: new GLTFShape('models/fishB.glb'),
+    smoke: new GLTFShape('models/smoke.glb'),
   },
 
   transforms: {
@@ -17,7 +19,7 @@ export default {
       rotation: Quaternion.Euler(0, 90, 0),
     }),
 
-    lights: new Transform({
+    tentacles: new Transform({
       position: new Vector3(48, 0, 64),
       rotation: Quaternion.Euler(0, 90, 0),
     }),
@@ -29,7 +31,11 @@ export default {
       position: new Vector3(48, 0, 64),
       rotation: Quaternion.Euler(0, 90, 0),
     }),
-
+    lightsTop: new Transform({
+      position: new Vector3(48, 0, 64),
+      rotation: Quaternion.Euler(0, 90, 0),
+      scale: new Vector3(1, 1, 1),
+    }),
     waterColumns: new Transform({
       position: new Vector3(48, 0, 64),
       rotation: Quaternion.Euler(0, 90, 0),
@@ -44,6 +50,12 @@ export default {
       position: new Vector3(48, 0, 64),
       rotation: Quaternion.Euler(0, 90, 0),
       scale: Vector3.Zero(),
+    }),
+
+    smoke: new Transform({
+      position: new Vector3(48, 0, 64),
+      rotation: Quaternion.Euler(0, 90, 0),
+      scale: new Vector3(1, 1, 1),
     }),
 
     screens: [
@@ -95,7 +107,7 @@ export default {
         scale: new Vector3(6.8, 6.7, -7),
       },
     ],
-/*
+
     danceAreas: [
       {
         transform: {
@@ -170,28 +182,27 @@ export default {
         type: 'all',
       },
     ],
+
+    animationStates: {
+      lights: [
+        'TL_Neutral',
+        'TL_Rise',
+        'TL_V01',
+        'TL_V02',
+        'TL_V03',
+        'TL_V04',
+        'TL_V05',
+        'TL_V06',
+        'TL_V07',
+      ],
+      lightsBack: ['Light_01_Action', 'Light_02_Action', 'Light_03_Action'],
+      lightsColumns: [
+        'Beat_V01_20fps',
+        'Beat_V02',
+        'Beat_V03_20pfs',
+        'Beat_V04_20pfs',
+      ],
+      waterColumns: ['WaterColumn_Action'],
+    },
   },
-*/
-  animationStates: {
-    lights: [
-      'TL_Neutral',
-      'TL_Rise',
-      'TL_V01',
-      'TL_V02',
-      'TL_V03',
-      'TL_V04',
-      'TL_V05',
-      'TL_V06',
-      'TL_V07',
-    ],
-    lightsBack: ['Light_01_Action', 'Light_02_Action', 'Light_03_Action'],
-    lightsColumns: [
-      'Beat_V01_20fps',
-      'Beat_V02',
-      'Beat_V03_20pfs',
-      'Beat_V04_20pfs',
-    ],
-    waterColumns: ['WaterColumn_Action'],
-  },
-}
 }
