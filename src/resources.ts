@@ -95,7 +95,7 @@ export default {
         scale: new Vector3(6.8, 6.7, -7),
       },
     ],
-
+/*
     danceAreas: [
       {
         transform: {
@@ -171,7 +171,7 @@ export default {
       },
     ],
   },
-
+*/
   animationStates: {
     lights: [
       'TL_Neutral',
@@ -193,4 +193,5 @@ export default {
     ],
     waterColumns: ['WaterColumn_Action'],
   },
+}
 }
