@@ -174,6 +174,7 @@ export function playDefaultVideo() {
   // main video
   manager.videoMat.albedoTexture = myVideoTexture
   manager.videoMat.emissiveTexture = myVideoTexture
+  myVideoTexture.loop = true
   myVideoTexture.playing = true
 
   runAction('artist0')
