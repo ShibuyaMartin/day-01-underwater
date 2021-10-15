@@ -1,5 +1,6 @@
 import { subtitleString } from './subtitle-files/BPMtoSubs1'
 import { subtitleString2 } from './subtitle-files/OliverDemoMerged2'
+import { MiyaSubs } from './subtitle-files/MergeBPM_MIYA_MIYA'
 
 export type showType = {
   link: string
@@ -10,7 +11,7 @@ export type showType = {
 }
 
 export const subtitlesList = [
-  subtitleString,
+  MiyaSubs,
   subtitleString2,
   subtitleString,
   subtitleString,

@@ -9,7 +9,7 @@ export let tentacles = new Synced(
   resources.transforms.tentacles
 )
 
-tentacles.playAnimation('TL_Neutral')
+// tentacles.playAnimation('TL_Neutral')
 
 export let lights_columns = new Synced(
   resources.models.lightsColumns,
@@ -22,7 +22,7 @@ export let lights_back = new Synced(
   false,
   resources.transforms.lightsBack
 )
-lights_back.playAnimation('Lights_01_Action')
+// lights_back.playAnimation('Lights_01_Action')
 
 export let lights_top = new Synced(
   resources.models.lightsTop,

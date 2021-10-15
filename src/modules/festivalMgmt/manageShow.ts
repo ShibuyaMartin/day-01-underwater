@@ -19,6 +19,7 @@ import {
   smoke,
   tentacles,
 } from '../animatedEntities'
+import * as utils from '@dcl/ecs-scene-utils'
 
 // Default beats per minute of show
 export let BPM = 120
@@ -43,9 +44,10 @@ export function runAction(action: string) {
       break
     case 'PAUSEALL':
       tentacles.playAnimation('TL_Neutral')
+      lights_back.playAnimation('Lights_01_Action')
+      lights_top.playAnimation('SL_V01')
+      lights_top.stopAllAnimations()
       lights_columns.hide()
-      lights_back.hide()
-      lights_top.hide()
       smoke.hide()
       fireworkCenterL.hide()
       fireworkCenterR.hide()
@@ -58,103 +60,106 @@ export function runAction(action: string) {
       nina_emojis.hide()
 
     case 'TL_Rise':
-      tentacles.playAnimation('TL_Rise', true)
+      tentacles.playAnimation('TL_Rise', true, 2.5)
+      utils.setTimeout(2500, () => {
+        runAction('TL_VO1')
+      })
       break
     case 'TL_VO1':
-      tentacles.playAnimation('TL_VO1')
+      tentacles.playAnimation('TL_VO1', false, 0, BPM / 120)
       break
     case 'TL_VO2':
-      tentacles.playAnimation('TL_VO2')
+      tentacles.playAnimation('TL_VO2', false, 0, BPM / 120)
       break
     case 'TL_VO3':
-      tentacles.playAnimation('TL_VO3')
+      tentacles.playAnimation('TL_VO3', false, 0, BPM / 120)
       break
     case 'TL_VO4':
-      tentacles.playAnimation('TL_VO4')
+      tentacles.playAnimation('TL_VO4', false, 0, BPM / 120)
       break
     case 'TL_VO5':
-      tentacles.playAnimation('TL_VO5')
+      tentacles.playAnimation('TL_VO5', false, 0, BPM / 120)
       break
     case 'TL_VO6':
-      tentacles.playAnimation('TL_VO6')
+      tentacles.playAnimation('TL_VO6', false, 0, BPM / 120)
       break
     case 'TL_VO7':
-      tentacles.playAnimation('TL_VO7')
+      tentacles.playAnimation('TL_VO7', false, 0, BPM / 120)
       break
     case 'Smoke_Neutral':
       smoke.playAnimation('Smoke_Neutral')
       break
 
     case 'Smoke_V01':
-      smoke.playAnimation('Smoke_V01')
+      smoke.playAnimation('Smoke_V01', false, 0, BPM / 120)
       break
 
     case 'Smoke_V02':
-      smoke.playAnimation('Smoke_V02')
+      smoke.playAnimation('Smoke_V02', false, 0, BPM / 120)
       break
 
     case 'Smoke_V02':
-      smoke.playAnimation('Smoke_V02')
+      smoke.playAnimation('Smoke_V02', false, 0, BPM / 120)
       break
 
     case 'Lights_01_Action':
-      lights_back.playAnimation('Lights_01_Action')
+      lights_back.playAnimation('Lights_01_Action', false, 0, BPM / 120)
       break
 
     case 'Lights_02_Action':
-      lights_back.playAnimation('Lights_02_Action')
+      lights_back.playAnimation('Lights_02_Action', false, 0, BPM / 120)
       break
 
     case 'Lights_03_Action':
-      lights_back.playAnimation('Lights_03_Action')
+      lights_back.playAnimation('Lights_03_Action', false, 0, BPM / 120)
       break
 
     case 'Beat_V01':
-      lights_columns.playAnimation('Beat_V01')
+      lights_columns.playAnimation('Beat_V01', false, 0, BPM / 120)
       break
 
     case 'Beat_V02':
-      lights_columns.playAnimation('Beat_V02')
+      lights_columns.playAnimation('Beat_V02', false, 0, BPM / 120)
       break
 
     case 'Beat_V03':
-      lights_columns.playAnimation('Beat_V03')
+      lights_columns.playAnimation('Beat_V03', false, 0, BPM / 120)
       break
 
     case 'Beat_V04':
-      lights_columns.playAnimation('Beat_V04')
+      lights_columns.playAnimation('Beat_V04', false, 0, BPM / 120)
       break
 
     case 'SL_V01':
-      lights_columns.playAnimation('SL_V01')
+      lights_top.playAnimation('SL_V01', false, 0, BPM / 120)
       break
 
     case 'SL_V02':
-      lights_columns.playAnimation('SL_V02')
+      lights_top.playAnimation('SL_V02', false, 0, BPM / 120)
       break
 
     case 'SL_V03':
-      lights_columns.playAnimation('SL_V03')
+      lights_top.playAnimation('SL_V03', false, 0, BPM / 120)
       break
 
     case 'SL_V04':
-      lights_columns.playAnimation('SL_V04')
+      lights_top.playAnimation('SL_V04', false, 0, BPM / 120)
       break
 
     case 'Nina_Logo_Action':
-      nina_logo.playAnimation('Nina_Logo_Action', true)
+      nina_logo.playAnimation('Nina_Logo_Action', true, 0, BPM / 120)
       break
 
     case 'Welcome_Action':
-      nina_welcome.playAnimation('Welcome_Action', true)
+      nina_welcome.playAnimation('Welcome_Action', true, 0, BPM / 120)
       break
 
     case 'Hearts_Action':
-      nina_hearts.playAnimation('Hearts_Action', true)
+      nina_hearts.playAnimation('Hearts_Action', true, 0, BPM / 120)
       break
 
     case 'Emojis_Action':
-      nina_emojis.playAnimation('Emojis_Action', true)
+      nina_emojis.playAnimation('Emojis_Action', true, 0, BPM / 120)
       break
 
     case 'circleBubbles':
@@ -163,19 +168,18 @@ export function runAction(action: string) {
 
     // TODO:
     // fireworks
-    // other artist names
 
-    case 'randomL2L3':
-      randomizer([`L2`, `L3`], 8)
-      break
+    // case 'randomL2L3':
+    //   randomizer([`L2`, `L3`], 8)
+    //   break
 
-    case 'randomL4L5':
-      randomizer([`L4`, `L5`], 8)
-      break
+    // case 'randomL4L5':
+    //   randomizer([`L4`, `L5`], 8)
+    //   break
 
-    case 'randomL6L7':
-      randomizer([`L6`, `L7`], 8)
-      break
+    // case 'randomL6L7':
+    //   randomizer([`L6`, `L7`], 8)
+    //   break
 
     case 'artist0':
       an_3lau.hide()
