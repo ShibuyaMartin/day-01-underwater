@@ -106,6 +106,11 @@ export default {
         rotation: Quaternion.Euler(12.998, 121.026, 359.769),
         scale: new Vector3(6.8, 6.7, -7),
       },
+      {
+        position: new Vector3(115.2, 31.3, 64),
+        rotation: Quaternion.Euler(0, 270, 0),
+        scale: new Vector3(15.4, 15.4, 1),
+      },
     ],
 
     danceAreas: [

@@ -5,7 +5,7 @@ import { Synced } from './syncable'
 
 export let tentacles = new Synced(
   resources.models.tentacles,
-  true,
+  false,
   resources.transforms.tentacles
 )
 
@@ -19,15 +19,18 @@ export let lights_columns = new Synced(
 
 export let lights_back = new Synced(
   resources.models.lightsBack,
-  true,
+  false,
   resources.transforms.lightsBack
 )
+lights_back.playAnimation('Lights_01_Action')
 
 export let lights_top = new Synced(
   resources.models.lightsTop,
-  true,
+  false,
   resources.transforms.lightsTop
 )
+lights_top.playAnimation('SL_V01')
+lights_top.stopAllAnimations()
 
 export let smoke = new Synced(
   resources.models.smoke,
@@ -116,3 +119,58 @@ export let fireworkR = new Synced(
 )
 
 /// Names of other artists
+
+export let an_3lau = new Synced(
+  new GLTFShape('models/an_3lau.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
+export let an_amber = new Synced(
+  new GLTFShape('models/an_amber_van_day.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
+export let an_benji = new Synced(
+  new GLTFShape('models/an_benji_patterson.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
+export let an_nina = new Synced(
+  new GLTFShape('models/an_nina_nesbitt.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
+export let an_rac = new Synced(
+  new GLTFShape('models/an_rac.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
+export let an_wombats = new Synced(
+  new GLTFShape('models/an_the_wombats.glb'),
+  true,
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)

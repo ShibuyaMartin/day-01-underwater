@@ -72,8 +72,12 @@ export class FestivalManagement {
     const circle = new Texture('src/concert/images/circle_mask.png')
 
     this.videoMat = new Material()
-    this.videoMat.emissiveColor
     this.videoMat.alphaTexture = circle
+    this.videoMat.emissiveIntensity = 3
+    this.videoMat.emissiveColor = Color3.White()
+    this.videoMat.roughness = 0
+    this.videoMat.specularIntensity = 1
+    this.videoMat.transparencyMode = 2
 
     for (let i in resources.transforms.screens) {
       this.liveScreens.push(
