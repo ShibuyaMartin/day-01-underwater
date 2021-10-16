@@ -62,29 +62,29 @@ export function runAction(action: string) {
     case 'TL_Rise':
       tentacles.playAnimation('TL_Rise', true, 2.5)
       utils.setTimeout(2500, () => {
-        runAction('TL_VO1')
+        runAction('TL_V01')
       })
       break
-    case 'TL_VO1':
-      tentacles.playAnimation('TL_VO1', false, 0, BPM / 120)
+    case 'TL_V01':
+      tentacles.playAnimation('TL_V01', false, 0, BPM / 120)
       break
-    case 'TL_VO2':
-      tentacles.playAnimation('TL_VO2', false, 0, BPM / 120)
+    case 'TL_V02':
+      tentacles.playAnimation('TL_V02', false, 0, BPM / 120)
       break
-    case 'TL_VO3':
-      tentacles.playAnimation('TL_VO3', false, 0, BPM / 120)
+    case 'TL_V03':
+      tentacles.playAnimation('TL_V03', false, 0, BPM / 120)
       break
-    case 'TL_VO4':
-      tentacles.playAnimation('TL_VO4', false, 0, BPM / 120)
+    case 'TL_V04':
+      tentacles.playAnimation('TL_V04', false, 0, BPM / 120)
       break
-    case 'TL_VO5':
-      tentacles.playAnimation('TL_VO5', false, 0, BPM / 120)
+    case 'TL_V05':
+      tentacles.playAnimation('TL_V05', false, 0, BPM / 120)
       break
-    case 'TL_VO6':
-      tentacles.playAnimation('TL_VO6', false, 0, BPM / 120)
+    case 'TL_V06':
+      tentacles.playAnimation('TL_V06', false, 0, BPM / 120)
       break
-    case 'TL_VO7':
-      tentacles.playAnimation('TL_VO7', false, 0, BPM / 120)
+    case 'TL_V07':
+      tentacles.playAnimation('TL_V07', false, 0, BPM / 120)
       break
     case 'Smoke_Neutral':
       smoke.playAnimation('Smoke_Neutral')
@@ -102,16 +102,16 @@ export function runAction(action: string) {
       smoke.playAnimation('Smoke_V02', false, 0, BPM / 120)
       break
 
-    case 'Lights_01_Action':
-      lights_back.playAnimation('Lights_01_Action', false, 0, BPM / 120)
+    case 'Light_01_Action':
+      lights_back.playAnimation('Light_01_Action', false, 0, BPM / 120)
       break
 
-    case 'Lights_02_Action':
-      lights_back.playAnimation('Lights_02_Action', false, 0, BPM / 120)
+    case 'Light_02_Action':
+      lights_back.playAnimation('Light_02_Action', false, 0, BPM / 120)
       break
 
-    case 'Lights_03_Action':
-      lights_back.playAnimation('Lights_03_Action', false, 0, BPM / 120)
+    case 'Light_03_Action':
+      lights_back.playAnimation('Light_03_Action', false, 0, BPM / 120)
       break
 
     case 'Beat_V01':

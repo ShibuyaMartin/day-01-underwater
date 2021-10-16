@@ -6,7 +6,8 @@ import { Synced } from './syncable'
 export let tentacles = new Synced(
   resources.models.tentacles,
   false,
-  resources.transforms.tentacles
+  resources.transforms.tentacles,
+  'TL_Neutral'
 )
 
 // tentacles.playAnimation('TL_Neutral')
@@ -22,7 +23,7 @@ export let lights_back = new Synced(
   false,
   resources.transforms.lightsBack
 )
-// lights_back.playAnimation('Lights_01_Action')
+lights_back.playAnimation('Light_01_Action')
 
 export let lights_top = new Synced(
   resources.models.lightsTop,
