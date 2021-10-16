@@ -100,7 +100,7 @@ export let fireworkCenterR = new Synced(
 )
 
 export let fireworkL = new Synced(
-  new GLTFShape('models/firework_03.glb'),
+  new GLTFShape('models/firework_02.glb'),
   true,
   new Transform({
     position: new Vector3(48, 0, 64),
@@ -110,7 +110,7 @@ export let fireworkL = new Synced(
 )
 
 export let fireworkR = new Synced(
-  new GLTFShape('models/firework_03.glb'),
+  new GLTFShape('models/firework_02.glb'),
   true,
   new Transform({
     position: new Vector3(48, 0, 64 + 92 - 35),

@@ -133,59 +133,57 @@ plants_stage.addComponent(
 )
 engine.addEntity(plants_stage)
 
-// //add fireworks_01
+// // //add fireworks_01
 
-export let fireworks_01 = new Entity()
-fireworks_01.addComponent(new GLTFShape('models/firework_01.glb'))
-fireworks_01.addComponent(
-  new Transform({
-    position: new Vector3(48, 0, 64),
-    rotation: Quaternion.Euler(0, 90, 0),
-    scale: new Vector3(1,1,1)
-  })
-)
-engine.addEntity(fireworks_01) 
+// export let fireworks_01 = new Entity()
+// fireworks_01.addComponent(new GLTFShape('models/firework_01.glb'))
+// fireworks_01.addComponent(
+//   new Transform({
+//     position: new Vector3(48, 0, 64),
+//     rotation: Quaternion.Euler(0, 90, 0),
+//     scale: new Vector3(1,1,1)
+//   })
+// )
+// engine.addEntity(fireworks_01)
 
+// // //add firework_02
 
-// //add firework_02
+// export let firework_02 = new Entity()
+// firework_02.addComponent(new GLTFShape('models/firework_01.glb'))
+// firework_02.addComponent(
+//   new Transform({
+//     position: new Vector3(48, 0, 98),
+//     rotation: Quaternion.Euler(0, 90, 0),
+//     scale: new Vector3(1,1,1)
+//   })
+// )
+// engine.addEntity(firework_02)
 
-export let firework_02 = new Entity()
-firework_02.addComponent(new GLTFShape('models/firework_01.glb'))
-firework_02.addComponent(
-  new Transform({
-    position: new Vector3(48, 0, 98),
-    rotation: Quaternion.Euler(0, 90, 0),
-    scale: new Vector3(1,1,1)
-  })
-)
-engine.addEntity(firework_02) 
+// // //add firework_03
 
-// //add firework_03
+// export let firework_03 = new Entity()
+// firework_03.addComponent(new GLTFShape('models/firework_02.glb'))
+// firework_03.addComponent(
+//   new Transform({
+//     position: new Vector3(48, 0, 64),
+//     rotation: Quaternion.Euler(0, 90, 0),
+//     scale: new Vector3(1,1,1)
+//   })
+// )
+// engine.addEntity(firework_03)
 
-export let firework_03 = new Entity()
-firework_03.addComponent(new GLTFShape('models/firework_02.glb'))
-firework_03.addComponent(
-  new Transform({
-    position: new Vector3(48, 0, 64),
-    rotation: Quaternion.Euler(0, 90, 0),
-    scale: new Vector3(1,1,1)
-  })
-)
-engine.addEntity(firework_03) 
+// // //add firework_04
 
-
-// //add firework_04
-
-export let firework_04 = new Entity()
-firework_04.addComponent(new GLTFShape('models/firework_02.glb'))
-firework_04.addComponent(
-  new Transform({
-    position: new Vector3(48, 0, 122),
-    rotation: Quaternion.Euler(0, 90, 0),
-    scale: new Vector3(1,1,1)
-  })
-)
-engine.addEntity(firework_04) 
+// export let firework_04 = new Entity()
+// firework_04.addComponent(new GLTFShape('models/firework_02.glb'))
+// firework_04.addComponent(
+//   new Transform({
+//     position: new Vector3(48, 0, 122),
+//     rotation: Quaternion.Euler(0, 90, 0),
+//     scale: new Vector3(1,1,1)
+//   })
+// )
+// engine.addEntity(firework_04)
 
 export let manager = new FestivalManagement()
 manager.checkTime()
