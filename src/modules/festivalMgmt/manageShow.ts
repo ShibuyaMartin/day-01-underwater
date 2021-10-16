@@ -43,6 +43,7 @@ export function runAction(action: string) {
 
       break
     case 'PAUSEALL':
+      tentacles.stopAllAnimations()
       tentacles.playAnimation('TL_Neutral')
       lights_back.playAnimation('Lights_01_Action')
       lights_top.playAnimation('SL_V01')
@@ -164,6 +165,22 @@ export function runAction(action: string) {
 
     case 'circleBubbles':
       //TODO
+      break
+
+    case 'fireworkCenterL':
+      fireworkCenterL.playAnimation('Play', true, 0, BPM / 120)
+      break
+
+    case 'fireworkCenterR':
+      fireworkCenterR.playAnimation('Play', true, 0, BPM / 120)
+      break
+
+    case 'fireworkR':
+      fireworkR.playAnimation('Play', true, 0, BPM / 120)
+      break
+
+    case 'fireworkL':
+      fireworkL.playAnimation('Play', true, 0, BPM / 120)
       break
 
     // TODO:

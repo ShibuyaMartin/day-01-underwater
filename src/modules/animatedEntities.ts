@@ -90,10 +90,10 @@ export let fireworkCenterL = new Synced(
 )
 
 export let fireworkCenterR = new Synced(
-  new GLTFShape('models/firework_02.glb'),
+  new GLTFShape('models/firework_01.glb'),
   true,
   new Transform({
-    position: new Vector3(48, 0, 64),
+    position: new Vector3(48, 0, 64 + 33),
     rotation: Quaternion.Euler(0, 90, 0),
     scale: new Vector3(1, 1, 1),
   })
@@ -110,10 +110,10 @@ export let fireworkL = new Synced(
 )
 
 export let fireworkR = new Synced(
-  new GLTFShape('models/firework_04.glb'),
+  new GLTFShape('models/firework_03.glb'),
   true,
   new Transform({
-    position: new Vector3(48, 0, 64),
+    position: new Vector3(48, 0, 64 + 92 - 35),
     rotation: Quaternion.Euler(0, 90, 0),
     scale: new Vector3(1, 1, 1),
   })

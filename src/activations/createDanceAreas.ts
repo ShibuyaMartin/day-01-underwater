@@ -11,11 +11,11 @@ export function createDanceAreas() {
       new Transform(resources.transforms.danceAreas[i].transform)
     )
 
-    executeTask(async () => {
-      if (await isPreviewMode()) {
-        area.addComponent(new PlaneShape())
-      }
-    })
+    // executeTask(async () => {
+    //   if (await isPreviewMode()) {
+    //     area.addComponent(new PlaneShape())
+    //   }
+    // })
 
     engine.addEntity(area)
     hud.attachToEntity(area)

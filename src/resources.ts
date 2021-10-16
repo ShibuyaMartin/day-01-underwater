@@ -116,7 +116,7 @@ export default {
     danceAreas: [
       {
         transform: {
-          position: new Vector3(50, 1, 24),
+          position: new Vector3(96, 6.17, 27),
           rotation: Quaternion.Euler(90, 0, 0),
           scale: new Vector3(11, 10, 1),
         },
@@ -124,7 +124,7 @@ export default {
       },
       {
         transform: {
-          position: new Vector3(79, 1, 43),
+          position: new Vector3(97, 7.5, 38),
           rotation: Quaternion.Euler(90, 0, 0),
           scale: new Vector3(11, 10, 1),
         },
@@ -140,15 +140,15 @@ export default {
       },
       {
         transform: {
-          position: new Vector3(68, 1, 95),
+          position: new Vector3(104, 19.4, 62),
           rotation: Quaternion.Euler(90, 0, 0),
-          scale: new Vector3(11, 10, 1),
+          scale: new Vector3(26, 26, 1),
         },
         type: PredefinedEmote.HAMMER,
       },
       {
         transform: {
-          position: new Vector3(47, 1, 103),
+          position: new Vector3(98, 8.9, 90),
           rotation: Quaternion.Euler(90, 0, 0),
           scale: new Vector3(11, 10, 1),
         },
@@ -156,33 +156,18 @@ export default {
       },
       {
         transform: {
-          position: new Vector3(73, 20, 55),
+          position: new Vector3(95, 6.2, 100),
           rotation: Quaternion.Euler(90, 0, 0),
           scale: new Vector3(11, 10, 1),
         },
-        type: PredefinedEmote.HANDS_AIR,
+        type: PredefinedEmote.TIK,
       },
+
       {
         transform: {
-          position: new Vector3(72, 20, 70),
+          position: new Vector3(71, 1, 63),
           rotation: Quaternion.Euler(90, 0, 0),
-          scale: new Vector3(11, 10, 1),
-        },
-        type: PredefinedEmote.DISCO,
-      },
-      {
-        transform: {
-          position: new Vector3(76, 1, 80),
-          rotation: Quaternion.Euler(90, 0, 0),
-          scale: new Vector3(11, 10, 1),
-        },
-        type: PredefinedEmote.DAB,
-      },
-      {
-        transform: {
-          position: new Vector3(52, 1, 63),
-          rotation: Quaternion.Euler(90, 0, 0),
-          scale: new Vector3(18, 33, 5),
+          scale: new Vector3(40, 55, 5),
         },
         type: 'all',
       },
