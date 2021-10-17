@@ -2,6 +2,8 @@ import { subtitleString } from './subtitle-files/BPMtoSubs1'
 import { subtitleString2 } from './subtitle-files/OliverDemoMerged2'
 import { MiyaSubs } from './subtitle-files/MergeBPM_MIYA_MIYA'
 
+export let FAKING_LOCALLY: boolean = true
+
 export type showType = {
   link: string
   subs?: string
