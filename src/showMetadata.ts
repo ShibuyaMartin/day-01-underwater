@@ -1,6 +1,7 @@
 import { subtitleString } from './subtitle-files/BPMtoSubs1'
 import { subtitleString2 } from './subtitle-files/OliverDemoMerged2'
 import { MiyaSubs } from './subtitle-files/MergeBPM_MIYA_MIYA'
+import { NinaSubs } from './subtitle-files/mergedNina'
 
 export type showType = {
   link: string
@@ -16,11 +17,10 @@ export const subtitlesList = [
   subtitleString,
   subtitleString,
   subtitleString,
-  subtitleString,
-  subtitleString,
+  NinaSubs,
 ]
 
-export let FAKING_LOCALLY: boolean = false
+export let FAKING_LOCALLY: boolean = true
 
 export const shows: any = {
   deadmau5: {
@@ -29,7 +29,7 @@ export const shows: any = {
     startTime: 1633650252,
     length: 47,
   },
-  nadia: { url: 'peer-ec1.decentraland.org' },
+  nina: { link: 'videos/NinaNesbitt720.mp4' },
   test: {
     link: 'videos/OliverResumeBPMTest.mp4',
     subs: subtitleString2,

@@ -151,7 +151,7 @@ export function playVideo(
   engine.addSystem(myVideoSystem)
 
   mySubtitleSystem = new CustomSubtitleSystem(subtitlesList[artistId])
-  mySubtitleSystem.setOffset(offsetSeconds)
+  mySubtitleSystem.setOffset(offsetSeconds * 1000)
   engine.addSystem(mySubtitleSystem)
 
   let artistSignAnimation = 'artist' + (artistId + 1)
@@ -218,5 +218,5 @@ input.subscribe('BUTTON_DOWN', ActionButton.PRIMARY, false, (e) => {
 // - index from subtitlesList in Showmetadata.ts (starts in 0)
 // - seconds of offset to start
 if (FAKING_LOCALLY) {
-  playVideo(shows.test, 0, 0)
+  playVideo(shows.nina, 5, 60 * 3.5)
 }

@@ -30,6 +30,7 @@ export enum STAGE_IDS {
 }
 export const STAGE_ID = STAGE_IDS.EVOLUTION
 
+let tentaclesOut: boolean = false
 // NOTE: STOPALL, PAUSEALL and default must always exist
 
 /// Run actions
@@ -40,14 +41,21 @@ export function runAction(action: string) {
       if (RandomizerSystem._instance) {
         RandomizerSystem._instance.active = false
       }
+      if (tentacles.hasComponent(utils.Delay)) {
+        tentacles.removeComponent(utils.Delay)
+      }
+      tentaclesOut = false
 
       break
     case 'PAUSEALL':
-      tentacles.stopAllAnimations()
-      tentacles.playAnimation('TL_Neutral')
+      //   tentacles.stopAllAnimations()
+      if (!tentaclesOut) {
+        tentacles.playAnimation('TL_Neutral')
+      }
+
       lights_back.playAnimation('Lights_01_Action')
       lights_top.playAnimation('SL_V01')
-      lights_top.stopAllAnimations()
+      //   lights_top.stopAllAnimations()
       lights_columns.hide()
       smoke.hide()
       fireworkCenterL.hide()
@@ -59,33 +67,52 @@ export function runAction(action: string) {
       nina_welcome.hide()
       nina_hearts.hide()
       nina_emojis.hide()
+      break
 
     case 'TL_Rise':
+      tentaclesOut = true
       tentacles.playAnimation('TL_Rise', true, 2.5)
-      utils.setTimeout(2500, () => {
-        runAction('TL_V01')
-      })
+      if (tentacles.hasComponent(utils.Delay)) {
+        tentacles.removeComponent(utils.Delay)
+      }
+      tentacles.addComponentOrReplace(
+        new utils.Delay(2500, () => {
+          tentacles.playAnimation('TL_V01', false, 0, BPM / 120)
+        })
+      )
       break
     case 'TL_V01':
+      tentaclesOut = true
       tentacles.playAnimation('TL_V01', false, 0, BPM / 120)
       break
     case 'TL_V02':
+      tentaclesOut = true
       tentacles.playAnimation('TL_V02', false, 0, BPM / 120)
       break
     case 'TL_V03':
+      tentaclesOut = true
       tentacles.playAnimation('TL_V03', false, 0, BPM / 120)
       break
     case 'TL_V04':
+      tentaclesOut = true
       tentacles.playAnimation('TL_V04', false, 0, BPM / 120)
       break
     case 'TL_V05':
+      tentaclesOut = true
       tentacles.playAnimation('TL_V05', false, 0, BPM / 120)
       break
     case 'TL_V06':
+      tentaclesOut = true
       tentacles.playAnimation('TL_V06', false, 0, BPM / 120)
       break
     case 'TL_V07':
+      tentaclesOut = true
       tentacles.playAnimation('TL_V07', false, 0, BPM / 120)
+      break
+
+    case 'TL_Neutral':
+      tentaclesOut = false
+      tentacles.playAnimation('TL_Neutral', true)
       break
     case 'Smoke_Neutral':
       smoke.playAnimation('Smoke_Neutral')
@@ -93,10 +120,6 @@ export function runAction(action: string) {
 
     case 'Smoke_V01':
       smoke.playAnimation('Smoke_V01', false, 0, BPM / 120)
-      break
-
-    case 'Smoke_V02':
-      smoke.playAnimation('Smoke_V02', false, 0, BPM / 120)
       break
 
     case 'Smoke_V02':
@@ -181,6 +204,49 @@ export function runAction(action: string) {
 
     case 'fireworkL':
       fireworkL.playAnimation('Play', true, 0, BPM / 120)
+      break
+
+    case 'fireworkAll':
+      fireworkCenterL.playAnimation('Play', true, 0, BPM / 120)
+      fireworkCenterR.playAnimation('Play', true, 0, BPM / 120)
+      fireworkR.playAnimation('Play', true, 0, BPM / 120)
+      fireworkL.playAnimation('Play', true, 0, BPM / 120)
+      break
+
+    case 'TL_rdm1':
+      randomizer([`TL_V01`, `TL_V02`, `TL_V03`], 8)
+      break
+    case 'TL_rdm2':
+      randomizer([`TL_V04`, `TL_V05`, `TL_V06`, `TL_V07`], 8)
+      break
+    case 'TL_rdm3':
+      randomizer(
+        [`TL_V01`, `TL_V02`, `TL_V03`, `TL_V04`, `TL_V05`, `TL_V06`, `TL_V07`],
+        8
+      )
+      break
+    case 'Smoke_rdm':
+      randomizer([`Smoke_V01`, `Smoke_V02`], 8)
+      break
+    case 'Beat_rdm1':
+      randomizer([`Beat_V01`, `Beat_V02`], 8)
+      break
+
+    case 'Beat_rdm2':
+      randomizer([`Beat_V03`, `Beat_V04`], 8)
+      break
+    case 'Beat_rdm3':
+      randomizer([`Beat_V01`, `Beat_V02`, `Beat_V03`, `Beat_V04`], 8)
+      break
+
+    case 'SL_rdm1':
+      randomizer([`SL_V01`, `SL_V02`], 8)
+      break
+    case 'SL_rdm2':
+      randomizer([`SL_V03`, `SL_V04`], 8)
+      break
+    case 'SL_rdm3':
+      randomizer([`SL_V01`, `SL_V02`, `SL_V03`, `SL_V04`], 8)
       break
 
     // TODO:
