@@ -2,6 +2,7 @@ import * as utils from '@dcl/ecs-scene-utils'
 import { createDanceAreas } from 'src/activations/createDanceAreas'
 
 import resources from 'src/resources'
+import { scene } from 'src/sceneParent'
 import { LiveScreen } from './liveScreen'
 
 export class FestivalManagement {
@@ -29,11 +30,13 @@ export class FestivalManagement {
     this.stage.addComponent(resources.models.stage)
     this.stage.addComponent(resources.transforms.stage)
     engine.addEntity(this.stage)
+    this.stage.setParent(scene)
 
     this.waterColumns = new Entity()
     this.waterColumns.addComponent(resources.models.waterColumns)
     this.waterColumns.addComponent(resources.transforms.waterColumns)
     engine.addEntity(this.waterColumns)
+    this.waterColumns.setParent(scene)
 
     // this.waterColumns.addComponent(new Animator())
     // for (let i = 0; i < resources.animationStates.waterColumns.length; i++) {
@@ -59,12 +62,14 @@ export class FestivalManagement {
     this.fishA.addComponent(resources.models.fishA)
     this.fishA.addComponent(resources.transforms.fishA)
     engine.addEntity(this.fishA)
+    this.fishA.setParent(scene)
 
     //add fish B
     this.fishB = new Entity()
     this.fishB.addComponent(resources.models.fishB)
     this.fishB.addComponent(resources.transforms.fishB)
     engine.addEntity(this.fishB)
+    this.fishB.setParent(scene)
   }
 
   createScreens() {
@@ -73,7 +78,7 @@ export class FestivalManagement {
 
     this.videoMat = new Material()
     this.videoMat.alphaTexture = circle
-    this.videoMat.emissiveIntensity = 3
+    this.videoMat.emissiveIntensity = 2
     this.videoMat.emissiveColor = Color3.White()
     this.videoMat.roughness = 0
     this.videoMat.specularIntensity = 1

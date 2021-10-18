@@ -1,4 +1,5 @@
 import { hud } from 'src/builderhud/BuilderHUD'
+import { scene } from 'src/sceneParent'
 
 export class LiveScreen extends Entity {
   constructor(
@@ -8,6 +9,7 @@ export class LiveScreen extends Entity {
   ) {
     super(name)
 
+    this.setParent(scene)
     engine.addEntity(this)
     this.addComponent(material)
     this.addComponent(new Transform(tranform))

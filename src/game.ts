@@ -2,6 +2,7 @@
 
 import { isPreviewMode } from '@decentraland/EnvironmentAPI'
 import { FestivalManagement } from './concert/festivalMGMT'
+import { scene } from './sceneParent'
 
 //add mushrooms
 
@@ -15,6 +16,7 @@ mushrooms.addComponent(
   })
 )
 engine.addEntity(mushrooms)
+mushrooms.setParent(scene)
 
 //add mushrooms_02
 
@@ -28,7 +30,7 @@ mushrooms_02.addComponent(
   })
 )
 engine.addEntity(mushrooms_02)
-
+mushrooms_02.setParent(scene)
 //add mushrooms_03
 
 export let mushrooms_03 = new Entity()
@@ -41,7 +43,7 @@ mushrooms_03.addComponent(
   })
 )
 engine.addEntity(mushrooms_03)
-
+mushrooms_03.setParent(scene)
 //add mushrooms_04
 
 export let mushrooms_04 = new Entity()
@@ -54,7 +56,7 @@ mushrooms_04.addComponent(
   })
 )
 engine.addEntity(mushrooms_04)
-
+mushrooms_04.setParent(scene)
 //add mushrooms_05
 
 export let mushrooms_05 = new Entity()
@@ -67,20 +69,20 @@ mushrooms_05.addComponent(
   })
 )
 engine.addEntity(mushrooms_05)
+mushrooms_05.setParent(scene)
+//add mushrooms_06
 
-//add mushroom_06
-
-export let mushroom_06 = new Entity()
-mushroom_06.addComponent(new GLTFShape('models/mushrooms_03.glb'))
-mushroom_06.addComponent(
+export let mushrooms_06 = new Entity()
+mushrooms_06.addComponent(new GLTFShape('models/mushrooms_03.glb'))
+mushrooms_06.addComponent(
   new Transform({
     position: new Vector3(30, 8, 60),
     rotation: Quaternion.Euler(0, 120, 0),
     scale: new Vector3(1, 1, 1),
   })
 )
-engine.addEntity(mushroom_06)
-
+engine.addEntity(mushrooms_06)
+mushrooms_06.setParent(scene)
 //add mushrooms_07
 
 export let mushrooms_07 = new Entity()
@@ -93,7 +95,7 @@ mushrooms_07.addComponent(
   })
 )
 engine.addEntity(mushrooms_07)
-
+mushrooms_07.setParent(scene)
 //add bubbles
 
 export let bubbles = new Entity()
@@ -106,7 +108,7 @@ bubbles.addComponent(
   })
 )
 engine.addEntity(bubbles)
-
+bubbles.setParent(scene)
 //add water_fountain
 
 export let water_fountain = new Entity()
@@ -119,7 +121,7 @@ water_fountain.addComponent(
   })
 )
 engine.addEntity(water_fountain)
-
+water_fountain.setParent(scene)
 //add plants_stage
 
 export let plants_stage = new Entity()
@@ -132,7 +134,7 @@ plants_stage.addComponent(
   })
 )
 engine.addEntity(plants_stage)
-
+plants_stage.setParent(scene)
 // // //add fireworks_01
 
 // export let fireworks_01 = new Entity()

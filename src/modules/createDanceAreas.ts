@@ -1,21 +1,25 @@
 import * as utils from '@dcl/ecs-scene-utils'
 import { triggerEmote, PredefinedEmote } from '@decentraland/RestrictedActions'
+import resources from 'src/resources'
+import { scene } from 'src/sceneParent'
 
-export let danceAreas: any = [
-  {
-    transform: {
-      position: new Vector3(30, 0.65, 30),
-      rotation: Quaternion.Euler(90, 0, 0),
-      scale: new Vector3(20, 40, 20),
-    },
-    type: 'all',
-  },
-]
+// export let danceAreas: any = [
+//   {
+//     transform: {
+//       position: new Vector3(30, 0.65, 30),
+//       rotation: Quaternion.Euler(90, 0, 0),
+//       scale: new Vector3(20, 40, 20),
+//     },
+//     type: 'all',
+//   },
+// ]
 
 export function createDanceAreas() {
-  for (let i in danceAreas) {
+  for (let i in resources.transforms.danceAreas) {
     let area = new Entity('dance-' + i)
-    area.addComponent(new Transform(danceAreas[i].transform))
+    area.addComponent(
+      new Transform(resources.transforms.danceAreas[i].transform)
+    )
 
     // executeTask(async () => {
     //   if (await isPreviewMode()) {
@@ -23,9 +27,11 @@ export function createDanceAreas() {
     //   }
     // })
 
+    area.setParent(scene)
+
     engine.addEntity(area)
 
-    let dsystem = new DanceSystem(danceAreas[i].type)
+    let dsystem = new DanceSystem(resources.transforms.danceAreas[i].type)
 
     area.addComponent(
       new utils.TriggerComponent(
@@ -61,7 +67,7 @@ export class DanceSystem {
   ]
   //routines:string[] = [PredefinedEmote.ROBOT, PredefinedEmote. 'tik','tektonik','hammer', 'headexplode', 'handsair', 'disco', 'dab']
 
-  constructor(routine: PredefinedEmote) {
+  constructor(routine: PredefinedEmote | string) {
     this.routine = routine
   }
 

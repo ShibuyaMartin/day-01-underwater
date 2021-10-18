@@ -1,4 +1,5 @@
 import * as utils from '@dcl/ecs-scene-utils'
+import { scene } from 'src/sceneParent'
 
 export class Synced extends Entity {
   events: (() => void)[]
@@ -40,6 +41,8 @@ export class Synced extends Entity {
       this.getComponent(Animator).addClip(this.idleAnim)
       this.idleAnim.play()
     }
+
+    this.setParent(scene)
 
     engine.addEntity(this)
 
