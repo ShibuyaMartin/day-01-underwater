@@ -122,7 +122,7 @@ export let fireworkR = new Synced(
 /// Names of other artists
 
 export let an_3lau = new Synced(
-  new GLTFShape('models/an_3lau.glb'),
+  new GLTFShape('models/artist/an_3lau.glb'),
   true,
   new Transform({
     position: new Vector3(48, 0, 64),
@@ -130,8 +130,8 @@ export let an_3lau = new Synced(
     scale: new Vector3(1, 1, 1),
   })
 )
-export let an_amber = new Synced(
-  new GLTFShape('models/an_amber_van_day.glb'),
+export let an_colours = new Synced(
+  new GLTFShape('models/artist/an_crooked_colours.glb'),
   true,
   new Transform({
     position: new Vector3(48, 0, 64),
@@ -140,7 +140,7 @@ export let an_amber = new Synced(
   })
 )
 export let an_benji = new Synced(
-  new GLTFShape('models/an_benji_patterson.glb'),
+  new GLTFShape('models/artist/an_benji_patterson.glb'),
   true,
   new Transform({
     position: new Vector3(48, 0, 64),
@@ -149,7 +149,7 @@ export let an_benji = new Synced(
   })
 )
 export let an_nina = new Synced(
-  new GLTFShape('models/an_nina_nesbitt.glb'),
+  new GLTFShape('models/artist/an_nina_nesbitt.glb'),
   true,
   new Transform({
     position: new Vector3(48, 0, 64),
@@ -158,7 +158,7 @@ export let an_nina = new Synced(
   })
 )
 export let an_rac = new Synced(
-  new GLTFShape('models/an_rac.glb'),
+  new GLTFShape('models/artist/an_rac.glb'),
   true,
   new Transform({
     position: new Vector3(48, 0, 64),
@@ -166,8 +166,8 @@ export let an_rac = new Synced(
     scale: new Vector3(1, 1, 1),
   })
 )
-export let an_wombats = new Synced(
-  new GLTFShape('models/an_the_wombats.glb'),
+export let an_tapes = new Synced(
+  new GLTFShape('models/artist/an_luna_tapes.glb'),
   true,
   new Transform({
     position: new Vector3(48, 0, 64),

@@ -1,10 +1,10 @@
 import {
   an_3lau,
-  an_amber,
   an_benji,
+  an_colours,
   an_nina,
   an_rac,
-  an_wombats,
+  an_tapes,
   fireworkCenterL,
   fireworkCenterR,
   fireworkL,
@@ -266,65 +266,65 @@ export function runAction(action: string) {
 
     case 'artist0':
       an_3lau.hide()
-      an_amber.hide()
+      an_tapes.hide()
       an_benji.hide()
       an_nina.hide()
       an_rac.hide()
-      an_wombats.hide()
+      an_colours.hide()
       break
 
     case 'artist1':
       an_3lau.hide()
-      an_amber.appear()
+      an_tapes.appear()
       an_benji.hide()
       an_nina.hide()
       an_rac.hide()
-      an_wombats.hide()
+      an_colours.hide()
       break
 
     case 'artist2':
       an_3lau.hide()
-      an_amber.hide()
+      an_tapes.hide()
       an_benji.appear()
       an_nina.hide()
       an_rac.hide()
-      an_wombats.hide()
+      an_colours.hide()
       break
 
     case 'artist3':
       an_3lau.hide()
-      an_amber.hide()
+      an_tapes.hide()
       an_benji.hide()
       an_nina.hide()
       an_rac.hide()
-      an_wombats.appear()
+      an_colours.appear()
       break
 
     case 'artist4':
       an_3lau.hide()
-      an_amber.hide()
+      an_tapes.hide()
       an_benji.hide()
       an_nina.hide()
       an_rac.appear()
-      an_wombats.hide()
+      an_colours.hide()
       break
 
     case 'artist5':
       an_3lau.appear()
-      an_amber.hide()
+      an_tapes.hide()
       an_benji.hide()
       an_nina.hide()
       an_rac.hide()
-      an_wombats.hide()
+      an_colours.hide()
       break
 
     case 'artist6':
       an_3lau.hide()
-      an_amber.hide()
+      an_tapes.hide()
       an_benji.hide()
       an_nina.appear()
       an_rac.hide()
-      an_wombats.hide()
+      an_colours.hide()
       break
 
     case 'artist7':
