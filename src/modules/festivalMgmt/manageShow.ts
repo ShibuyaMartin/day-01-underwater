@@ -45,7 +45,7 @@ export function runAction(action: string) {
         tentacles.removeComponent(utils.Delay)
       }
       tentaclesOut = false
-
+      tentacles.playAnimation('TL_Neutral')
       break
     case 'PAUSEALL':
       //   tentacles.stopAllAnimations()
