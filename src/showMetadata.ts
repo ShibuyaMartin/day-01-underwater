@@ -1,7 +1,10 @@
 import { subs3Lau } from './subtitle-files/merge3lau'
 import { racSubs } from './subtitle-files/mergeRac'
-import { MiyaSubs } from './subtitle-files/MergeBPM_MIYA_MIYA'
 import { NinaSubs } from './subtitle-files/mergedNina'
+import { subsBenji } from './subtitle-files/MergeBenjiPatterson'
+import { subsColors } from './subtitle-files/MergedCrookedColours'
+
+// TODO LUNA TAPES!!
 
 export type showType = {
   link: string
@@ -12,9 +15,9 @@ export type showType = {
 }
 
 export const subtitlesList = [
-  MiyaSubs,
-  MiyaSubs,
-  MiyaSubs,
+  subsBenji,
+  subsBenji,
+  subsColors,
   racSubs,
   subs3Lau,
   NinaSubs,
