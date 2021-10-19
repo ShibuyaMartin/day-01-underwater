@@ -1,4 +1,5 @@
 import { PredefinedEmote } from '@decentraland/RestrictedActions'
+import { PlaneUVData } from './modules/uvData'
 
 export default {
   models: {
@@ -194,5 +195,75 @@ export default {
       ],
       waterColumns: ['WaterColumn_Action'],
     },
+    
   },
+
+  screenUVs: [  
+    //center screen 1    
+    new PlaneUVData(
+      new Vector2(0.258, 0.933),
+      new Vector2(0.742, 0.933),
+      new Vector2(0.742, 0.067),
+      new Vector2(0.258, 0.067),
+      
+      
+    ),
+
+    new PlaneUVData(
+      new Vector2(0.032,0.34),
+      new Vector2(0.222,0.34),
+      new Vector2(0.222,0),
+      new Vector2(0.032,0),
+    ),
+
+    new PlaneUVData(
+      new Vector2(0, 1),
+      new Vector2(0.248, 1),
+      new Vector2(0.248,0.56),
+      new Vector2(0,0.56),
+    ),
+
+    new PlaneUVData(
+      new Vector2(0,0),
+      new Vector2(0,1),
+      new Vector2(1,0.5),
+      new Vector2(1,0),
+    ),
+
+    new PlaneUVData(
+      new Vector2(0,0),
+      new Vector2(0,1),
+      new Vector2(1,0.5),
+      new Vector2(1,0),
+    ),
+
+    new PlaneUVData(
+      new Vector2(1-0.222,0.34),
+      new Vector2(1-0.032,0.34),
+      new Vector2(1-0.032,0),
+      new Vector2(1-0.222,0),
+    ),
+
+    new PlaneUVData(
+      new Vector2(0.752, 1),
+      new Vector2(1, 1),
+      new Vector2(1,0.56),
+      new Vector2(0.752,0.56),
+    ),
+
+    new PlaneUVData(
+      new Vector2(0,0),
+      new Vector2(0,1),
+      new Vector2(1,0.5),
+      new Vector2(1,0),
+    ),
+
+    new PlaneUVData(
+      new Vector2(0,0),
+      new Vector2(0,1),
+      new Vector2(1,0.5),
+      new Vector2(1,0),
+    ),
+  ,
+]
 }
