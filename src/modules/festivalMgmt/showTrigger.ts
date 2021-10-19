@@ -10,6 +10,7 @@ import { VideoSystem } from '../festivalMgmt/VideoSystem'
 import * as utils from '@dcl/ecs-scene-utils'
 import { manager } from 'src/game'
 import { enablePoapTimer } from '../poap'
+import { hideBoard, startNextShowCounter } from './nextShowCounter'
 
 const DEFAULT_VIDEO =
   'https://player.vimeo.com/external/552481870.m3u8?s=c312c8533f97e808fccc92b0510b085c8122a875'
@@ -141,6 +142,8 @@ export function playVideo(
   const myVideoClip = new VideoClip(show.link)
   const myVideoTexture = new VideoTexture(myVideoClip)
 
+  hideBoard()
+
   // main video
   manager.videoMat.albedoTexture = myVideoTexture
   manager.videoMat.emissiveTexture = myVideoTexture
@@ -166,7 +169,7 @@ export function playVideo(
 
 let PLAYING_DEFAULT: boolean = false
 
-export function playDefaultVideo() {
+export function playDefaultVideo(runOfShow?: showType[]) {
   if (PLAYING_DEFAULT) {
     return
   }
@@ -184,6 +187,10 @@ export function playDefaultVideo() {
   myVideoTexture.playing = true
 
   runAction('artist0')
+
+  if (runOfShow) {
+    startNextShowCounter(runOfShow)
+  }
 }
 
 ///// DEBUG  REMOVE!!!

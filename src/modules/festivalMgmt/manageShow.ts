@@ -53,7 +53,7 @@ export function runAction(action: string) {
         tentacles.playAnimation('TL_Neutral')
       }
 
-      lights_back.playAnimation('Lights_01_Action')
+      lights_back.playAnimation('Lights_02_Action')
       lights_top.playAnimation('SL_V01')
       //   lights_top.stopAllAnimations()
       lights_columns.hide()
