@@ -74,7 +74,7 @@ export class FestivalManagement {
 
   createScreens() {
     texture: VideoTexture
-    const circle = new Texture('src/concert/images/circle_mask.png')
+    const circle = new Texture('src/concert/images/circle_masks.png')
 
     this.videoMat = new Material()
     this.videoMat.alphaTexture = circle
@@ -89,7 +89,8 @@ export class FestivalManagement {
         new LiveScreen(
           'screen-' + i,
           resources.transforms.screens[i],
-          this.videoMat
+          this.videoMat,
+          resources.screenUVs[i]
         )
       )
     }
