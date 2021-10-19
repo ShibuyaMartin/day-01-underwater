@@ -1,15 +1,15 @@
+import { manager } from 'src/game'
 import { showType } from 'src/showMetadata'
-import { head } from '../animatedEntities'
 
 let messageBoard = new Entity()
-messageBoard.setParent(head)
+messageBoard.setParent(manager.liveScreens[0])
 export let messageText = new TextShape()
 messageBoard.addComponent(messageText)
 messageBoard.addComponent(
   new Transform({
-    position: new Vector3(0, 11, 2.4),
+    position: new Vector3(0, 0, 0.3),
     rotation: Quaternion.Euler(0, 180, 0),
-    scale: new Vector3(2, 2, 2),
+    scale: new Vector3(0.2, 0.2, 0.2),
   })
 )
 messageText.visible = false
