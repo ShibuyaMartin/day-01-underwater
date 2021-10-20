@@ -7,7 +7,7 @@ export let messageText = new TextShape()
 messageBoard.addComponent(messageText)
 messageBoard.addComponent(
   new Transform({
-    position: new Vector3(0, 0, 0.3),
+    position: new Vector3(0, -0.07, 0.3),
     rotation: Quaternion.Euler(0, 180, 0),
     scale: new Vector3(0.2, 0.2, 0.2),
   })
@@ -51,7 +51,7 @@ export function startNextShowCounter(runOfShow: showType[]) {
   }
 
   if (!nextShow) {
-    setBoardMessage("Today's set is over, see you tomorrow!")
+    setBoardMessage("That's all for today. See you tomorrow!")
   }
 
   log(
