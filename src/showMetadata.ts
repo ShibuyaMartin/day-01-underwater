@@ -3,6 +3,7 @@ import { racSubs } from './subtitle-files/mergeRac'
 import { NinaSubs } from './subtitle-files/mergedNina'
 import { subsBenji } from './subtitle-files/MergeBenjiPatterson'
 import { subsColors } from './subtitle-files/MergedCrookedColours'
+import { subsTheLuna } from './subtitle-files/mergeTheLuna'
 
 // TODO LUNA TAPES!!
 
@@ -15,7 +16,7 @@ export type showType = {
 }
 
 export const subtitlesList = [
-  subsBenji,
+  subsTheLuna,
   subsBenji,
   subsColors,
   racSubs,
