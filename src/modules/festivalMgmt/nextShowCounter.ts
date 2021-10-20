@@ -17,6 +17,8 @@ messageText.fontSize = 6
 messageText.font = new Font(Fonts.SanFrancisco_Heavy)
 messageText.textWrapping = true
 messageText.width = 5
+messageText.outlineColor = Color3.Black()
+messageText.outlineWidth = 0.2
 
 export function setBoardMessage(text: string) {
   messageText.visible = true
