@@ -16,7 +16,7 @@ messageText.visible = false
 messageText.fontSize = 6
 messageText.font = new Font(Fonts.SanFrancisco_Heavy)
 messageText.textWrapping = true
-messageText.width = 7
+messageText.width = 5
 
 export function setBoardMessage(text: string) {
   messageText.visible = true
@@ -119,7 +119,8 @@ export class CountDownTimer implements ISystem {
 function secondsToString(rawSeconds: number) {
   let seconds = (Math.floor(rawSeconds) % 60).toString()
   let minutes = (Math.floor(rawSeconds / 60) % 60).toString()
-  let hours = Math.floor(rawSeconds / 360).toString()
+
+  let hours = Math.floor(rawSeconds / 3600).toString()
 
   if (seconds.length == 1) {
     seconds = '0' + seconds
