@@ -224,17 +224,17 @@ export default {
     ),
 
     new PlaneUVData(
-      new Vector2(0,0),
-      new Vector2(0,1),
-      new Vector2(1,0.5),
-      new Vector2(1,0),
+      new Vector2(0,0.56),
+      new Vector2(0.128,0.56),
+      new Vector2(0.128,0.34),
+      new Vector2(0,0.34),
     ),
 
     new PlaneUVData(
-      new Vector2(0,0),
-      new Vector2(0,1),
-      new Vector2(1,0.5),
-      new Vector2(1,0),
+      new Vector2(0.128,0.56),
+      new Vector2(0.257,0.56),
+      new Vector2(0.257,0.34),
+      new Vector2(0.128,0.34),
     ),
 
     new PlaneUVData(
@@ -252,17 +252,26 @@ export default {
     ),
 
     new PlaneUVData(
-      new Vector2(0,0),
-      new Vector2(0,1),
-      new Vector2(1,0.5),
-      new Vector2(1,0),
+      new Vector2(0.871, 0.56),
+      new Vector2(1, 0.56),
+      new Vector2(1, 0.34),
+      new Vector2(0.871, 0.34),
     ),
 
     new PlaneUVData(
-      new Vector2(0,0),
-      new Vector2(0,1),
-      new Vector2(1,0.5),
-      new Vector2(1,0),
+      new Vector2(0.871, 0.56),
+      new Vector2(0.742, 0.56),
+      new Vector2(0.742, 0.34),
+      new Vector2(0.871, 0.34),
+    ),
+     //Back center screen     
+     new PlaneUVData(
+      new Vector2(0.258, 0.933),
+      new Vector2(0.742, 0.933),
+      new Vector2(0.742, 0.067),
+      new Vector2(0.258, 0.067),
+      
+      
     ),
   ,
 ]

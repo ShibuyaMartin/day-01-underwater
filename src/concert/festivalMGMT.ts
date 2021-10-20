@@ -79,7 +79,7 @@ export class FestivalManagement {
     this.videoMat = new Material()
     this.videoMat.alphaTexture = circle
     this.videoMat.emissiveIntensity = 2
-    this.videoMat.emissiveColor = Color3.White()
+    this.videoMat.emissiveColor = Color3.Gray()
     this.videoMat.roughness = 0
     this.videoMat.specularIntensity = 1
     this.videoMat.transparencyMode = 2
