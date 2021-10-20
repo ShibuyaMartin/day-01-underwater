@@ -1,12 +1,12 @@
 {
   "display": {
-    "title": "Metaverse Festival Day Underwater",
+    "title": "Evolution Stage - Metaverse Festival",
     "favicon": "favicon_asset",
-    "navmapThumbnail": "scene-thumbnail.png"
+    "navmapThumbnail": "thumbnail.png"
   },
   "owner": "",
   "contact": {
-    "name": "Shibu",
+    "name": "Decentraland Foundation",
     "email": ""
   },
   "main": "bin/game.js",
