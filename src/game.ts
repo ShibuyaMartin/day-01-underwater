@@ -122,6 +122,8 @@ water_fountain.addComponent(
 )
 engine.addEntity(water_fountain)
 water_fountain.setParent(scene)
+
+
 //add plants_stage
 
 export let plants_stage = new Entity()
@@ -135,6 +137,22 @@ plants_stage.addComponent(
 )
 engine.addEntity(plants_stage)
 plants_stage.setParent(scene)
+
+//add stars
+
+export let stars = new Entity()
+stars.addComponent(new GLTFShape('models/stars.glb'))
+stars.addComponent(
+  new Transform({
+    position: new Vector3(48, 0, 64),
+    rotation: Quaternion.Euler(0, 90, 0),
+    scale: new Vector3(1, 1, 1),
+  })
+)
+engine.addEntity(stars)
+stars.setParent(scene)
+
+
 // // //add fireworks_01
 
 // export let fireworks_01 = new Entity()
