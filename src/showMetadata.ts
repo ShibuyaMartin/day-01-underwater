@@ -40,4 +40,13 @@ export const shows: any = {
     startTime: 1633650252,
     length: 15,
   },
+  luna: {
+    artist: 'The Luna Tapes',
+    eventId: 11160,
+    image: 'https://dclteam.s3.us-west-1.amazonaws.com/luna.png',
+    length: 665,
+    link: 'https://player.vimeo.com/external/636387134.m3u8?s=8d2d2cc45364010f9964edcdad4088adeb4877b1',
+    played: false,
+    startTime: 1634850000,
+  },
 }

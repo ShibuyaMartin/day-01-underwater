@@ -228,5 +228,5 @@ input.subscribe('BUTTON_DOWN', ActionButton.PRIMARY, false, (e) => {
 // - index from subtitlesList in Showmetadata.ts (starts in 0)
 // - seconds of offset to start
 if (FAKING_LOCALLY) {
-  playVideo(shows.nina, 5, 60 * 3.5)
+  playVideo(shows.luna, 0, 60 * 2)
 }
