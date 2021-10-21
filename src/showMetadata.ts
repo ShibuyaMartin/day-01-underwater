@@ -15,6 +15,11 @@ export type showType = {
   artist: string
 }
 
+export type adType = {
+  link: string
+  enabled: boolean
+}
+
 export const subtitlesList = [
   subsTheLuna,
   subsBenji,
