@@ -211,7 +211,12 @@ export function playDefaultVideo(runOfShow?: showType[], ad?: adType) {
   // main video
   manager.videoMat.albedoTexture = myVideoTexture
   manager.videoMat.emissiveTexture = myVideoTexture
-  myVideoTexture.loop = true
+
+  if (ad && ad.enabled) {
+    myVideoTexture.loop = false
+  } else {
+    myVideoTexture.loop = true
+  }
   myVideoTexture.playing = true
 
   runAction('artist0')
