@@ -303,7 +303,7 @@ export function createPoapItems() {
 createPoapItems()
 
 export class PoapTimer {
-  threshold = 5 * 60
+  threshold = 3 * 60
   timer = 0
   started = false
 
