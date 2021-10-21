@@ -92,6 +92,9 @@
     "blacklist": [],
     "teleportPosition": ""
   },
+  "featureToggles": {
+    "voiceChat": "disabled"
+},
   "spawnPoints": [
     {
       "name": "spawn1",
