@@ -330,6 +330,16 @@ export function runAction(action: string) {
     case 'artist7':
       break
 
+    case 'crate1':
+      break
+
+    case 'crate2':
+      break
+    case 'crate3':
+      break
+    case 'crate4':
+      break
+
     default:
       // check if starts with BPM
       if (action.substring(0, 3) == 'BPM') {
