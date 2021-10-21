@@ -20,6 +20,14 @@ import {
   tentacles,
 } from '../animatedEntities'
 import * as utils from '@dcl/ecs-scene-utils'
+import { dropCrate } from '../airdrops/crate'
+import {
+  campaign1,
+  campaign2,
+  campaign3,
+  campaign4,
+  campaign_keys,
+} from '../airdrops/loot'
 
 // Default beats per minute of show
 export let BPM = 120
@@ -331,13 +339,17 @@ export function runAction(action: string) {
       break
 
     case 'crate1':
+      dropCrate(campaign1, campaign_keys.crate1)
       break
 
     case 'crate2':
+      dropCrate(campaign2, campaign_keys.crate2)
       break
     case 'crate3':
+      dropCrate(campaign3, campaign_keys.crate3)
       break
     case 'crate4':
+      dropCrate(campaign4, campaign_keys.crate4)
       break
 
     default:
