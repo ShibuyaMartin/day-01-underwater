@@ -24,7 +24,7 @@ export const subtitlesList = [
   NinaSubs,
 ]
 
-export let FAKING_LOCALLY: boolean = false
+export let FAKING_LOCALLY: boolean = true
 
 export const shows: any = {
   deadmau5: {
